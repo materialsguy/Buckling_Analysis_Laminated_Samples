@@ -8,8 +8,8 @@ This Code allows the implementation of an eigenvalue buckling analysis, followed
 
 *Define_and_Run_Models.py*
 <ul>
-<li>Here, your Geometrical and simulational parameters must be defined, and different imperfection sizes can be run for each geometry. </li>
-<li>Different numbers and thicknesses of foils and substrates can be defined to analyse the buckling behaviour of the complex laminate.  </li>
+<li>Here, your Geometrical and simulational parameters must be defined; different imperfection sizes can be run for each geometry. </li>
+<li>Different numbers and thicknesses of foils and substrates can be defined to analyse the buckling behaviour of the complex laminate. </li>
 </ul>
 
 Graphical representation of the geometrical parameters used in the simulation:
