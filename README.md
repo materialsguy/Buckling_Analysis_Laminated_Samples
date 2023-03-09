@@ -1,6 +1,6 @@
-# Design samples
+# Buckling analyis to design laminated samples
 
-Please cite the Paper if you use the code ****
+Please cite the Paper *"Fatigue life assessment of metal foils in multifunctional composites via combined experiments and simulations"* if you use the code.
 
 The code was tested on the CentOS Linux version using Abaqus 2019 .HF6. All of the Code was written in Python 2.
 
