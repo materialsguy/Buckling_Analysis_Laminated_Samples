@@ -1,4 +1,4 @@
-# Buckling analyis to design laminated samples
+# Buckling analysis to design laminated samples
 
 Please cite the Paper *"Fatigue life assessment of metal foils in multifunctional composites via combined experiments and simulations"* if you use the code. See https://doi.org/10.1016/j.matdes.2023.111711 for further details. 
 
