@@ -106,6 +106,6 @@ def buckling_analysis(path, imperfection, length, width, notch_width, notch_inse
     frames = get_frames(path, file_name)
     print("Number of frames:", frames)
     remove_files(file_name)
-    import_nearest_node_modul(node_module_path)
+    import_nearest_node_module(node_module_path)
     evaluate_riks(path, length, width, notch_width, radius, constant_line,thickness, foil_thickness, substrate_thickness, number_of_foils, imperfection, file_name, frames, job_number)
     print('Buckling Analysis completed!')
