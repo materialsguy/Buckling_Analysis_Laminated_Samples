@@ -48,6 +48,7 @@ def find_nearest_node_from_pre_buckling(path, file_name, coordinates):
     '''
     _ = session.openOdb('{}{}.odb'.format(path, file_name))
     session.viewports[session.currentViewportName].odbDisplay.setFrame(step='Step-1', frame=0)
+    from nearestNodeModule import findNearestNode
     nodes = []
     for coordinate in coordinates:
         node = findNearestNode(xcoord=coordinate[0], ycoord=coordinate[1], zcoord=coordinate[2], name='{}{}.odb'.format(path, file_name), instanceName='')
@@ -180,6 +181,7 @@ def find_nearest_node_from_pre_buckling_foils(path, file_name, coordinates, notc
     '''
     _ = session.openOdb('{}{}.odb'.format(path, file_name))
     session.viewports[session.currentViewportName].odbDisplay.setFrame(step='Step-1', frame=0)
+    from nearestNodeModule import findNearestNode
     nodes = []
     for coordinate in coordinates:
         node_1 = findNearestNode(xcoord=0, ycoord=0, zcoord=coordinate, name='{}{}.odb'.format(path, file_name), instanceName='')

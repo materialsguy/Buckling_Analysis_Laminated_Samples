@@ -84,7 +84,7 @@ def eigenvalue_analysis(path, length, width, notch_width, notch_insert, radius, 
         print('Eigenvalue Buckling Analysis completed!')
 
 
-def buckling_analysis(path, imperfection, length, width, notch_width, notch_insert, radius, constant_line, foil_thickness, substrate_thickness, job_number, output_eigenvalue, number_of_foils, node_module_path, calculate_radius=False, ):
+def buckling_analysis(path, imperfection, length, width, notch_width, notch_insert, radius, constant_line, foil_thickness, substrate_thickness, job_number, output_eigenvalue, number_of_foils, node_module_path, calculate_radius=False, run_model=True ):
     length = float(length)
     constant_line = float(constant_line)
     foil_thickness = float(foil_thickness)
@@ -97,15 +97,19 @@ def buckling_analysis(path, imperfection, length, width, notch_width, notch_inse
     print("thickness", thickness)
 
     file_name = 'Post_Buckling_force_{}_IMP_{}'.format(job_number, imperfection)
+    if run_model:
+        openMdb(pathName="{}Buckling_{}.cae".format(path,job_number))
 
-    openMdb(pathName="{}Buckling_{}.cae".format(path,job_number))
+        create_second_model(length, width, radius, constant_line, notch_width, thickness, foil_thickness, substrate_thickness, path, job_number, break_by_displacement=False)
+        change_input_file_riks(path, file_name,  job_number, imperfection)
+        _ = run_second_model(path, file_name)
 
-    create_second_model(length, width, radius, constant_line, notch_width, thickness, foil_thickness, substrate_thickness, path, job_number, break_by_displacement=False)
-    change_input_file_riks(path, file_name,  job_number, imperfection)
-    _ = run_second_model(path, file_name)
+        remove_files(file_name)
+    else:
+        _ = session.openOdb(name="{}.odb".format(file_name))
     frames = get_frames(path, file_name)
     print("Number of frames:", frames)
-    remove_files(file_name)
+
     import_nearest_node_module(node_module_path)
     evaluate_riks(path, length, width, notch_width, radius, constant_line,thickness, foil_thickness, substrate_thickness, number_of_foils, imperfection, file_name, frames, job_number)
     print('Buckling Analysis completed!')
