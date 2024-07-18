@@ -2,6 +2,11 @@
 
 Please cite the Paper *"Fatigue life assessment of metal foils in multifunctional composites via combined experiments and simulations"* if you use the code. See  https://doi.org/10.1016/j.compositesb.2023.110715 and  https://doi.org/10.1016/j.matdes.2023.111711 for further details. 
 
+This code is citable via Zenodo: 
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12771548.svg)](https://doi.org/10.5281/zenodo.12771548)  
+
+
 The code was tested on the CentOS Linux version using Abaqus 2019 .HF6. All of the Code was written in Python 2.
 
 This Code allows the implementation of an eigenvalue buckling analysis, followed by a static step or a riks step of a complex, layered sample and evaluation in the commercial Abaqus software.
