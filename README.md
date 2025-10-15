@@ -18,7 +18,7 @@ This Code allows the implementation of an eigenvalue buckling analysis, followed
 </ul>
 
 Graphical representation of the geometrical parameters used in the simulation:
-![Image of the geometry](./Sample_design.jpg)
+![Image of the geometry](./Graphical_Abstract.jpg)
 
 The Folder “Codes” includes the following files:
 
